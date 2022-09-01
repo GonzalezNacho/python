@@ -1,2 +1,2 @@
 num = input("Ingrese Número: ")
-print("Usted ingresó: " + num)
+print("\nUsted ingresó: " + num)
