@@ -8,7 +8,7 @@ def comprobarDistacia(a, b, c):
         elif (a == c):
             mismaDistancia = False
         else:
-            mismaDistancia = (c+b)/2 == a
+            mismaDistancia = (c-a == a-b)
     elif (a == b):
         mismaDistancia = (a == c)
     else:
@@ -20,7 +20,7 @@ def comprobarDistacia(a, b, c):
         elif (a == c):
             mismaDistancia = False
         else:
-            mismaDistancia = (c+a)/2 == b
+            mismaDistancia = (c-b == b-a)
     return mismaDistancia
 
 def main():
@@ -28,8 +28,8 @@ def main():
     b = int(input("Ingrese el segundo número: "))
     c = int(input("Ingrese el tercer número: "))
     if comprobarDistacia(a, b, c):
-        print("\nEstán igualmente distanciados")
+        print("\nEstán igualmente distanciados!")
     else:
-        print("\nNO Están igualmente distaciados")
+        print("\nNO Están igualmente distaciados!")
 
 main()
