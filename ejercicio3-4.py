@@ -2,9 +2,9 @@ def comprobarDistacia(a, b, c):
     if (a > b):
         if (a > c):
             if (b < c):
-                mismaDistancia = (b+a)/2 == c
+                mismaDistancia = (a-c == c-b)
             else:
-                mismaDistancia = (a+c)/2 == b
+                mismaDistancia = (a-b == b-c)
         elif (a == c):
             mismaDistancia = False
         else:
@@ -14,9 +14,9 @@ def comprobarDistacia(a, b, c):
     else:
         if (b > c):
             if (a < c):
-                mismaDistancia = (b+a)/2 == c
+                mismaDistancia = (b-c == c-a)
             else:
-                mismaDistancia = (b+c)/2 == a
+                mismaDistancia = (b-a == a-c)
         elif (a == c):
             mismaDistancia = False
         else:
