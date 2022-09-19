@@ -1,26 +1,22 @@
+def comparar(a,b,c):
+    if (a > c):
+        if (b < c):
+            mismaDistancia = (a-c == c-b)
+        else:
+            mismaDistancia = (a-b == b-c)
+    elif (a == c or b ==c):
+        mismaDistancia = False
+    else:
+        mismaDistancia = (c-a == a-b)
+    return mismaDistancia
+
 def comprobarDistacia(a, b, c):
     if (a > b):
-        if (a > c):
-            if (b < c):
-                mismaDistancia = (a-c == c-b)
-            else:
-                mismaDistancia = (a-b == b-c)
-        elif (a == c):
-            mismaDistancia = False
-        else:
-            mismaDistancia = (c-a == a-b)
+        mismaDistancia = comparar(a,b,c)
     elif (a == b):
         mismaDistancia = (a == c)
     else:
-        if (b > c):
-            if (a < c):
-                mismaDistancia = (b-c == c-a)
-            else:
-                mismaDistancia = (b-a == a-c)
-        elif (a == c):
-            mismaDistancia = False
-        else:
-            mismaDistancia = (c-b == b-a)
+        mismaDistancia = comparar(b,a,c)
     return mismaDistancia
 
 def main():
