@@ -79,10 +79,12 @@ def dibujarI(b,car,esp):
             else:
                 print(esp,end="")
         print()
-        
 
+def comprobarB(texto):
+    b = int(input(texto))
+    while ()
 def main():
-    b = int(input("Ingrese el lado del cuadrado (debe ser >= 5 e impar)"))
+    b = comprobarB("Ingrese el lado del cuadrado (debe ser >= 5 e impar)")
     car = " " + input(" Ingrese un caracter imprimible: ")
     esp = " " + input(" Ingrese un caracter imprimible distinto del anterior: ")
     dibujar(b,car,esp)
