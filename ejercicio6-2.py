@@ -1,4 +1,4 @@
-def estaEnLista1(num, lista):
+def estaEnLista(num, lista):
     return num in lista
 
 def cargarLista():
@@ -7,7 +7,7 @@ def cargarLista():
     while num != 0:
         if num < 0:
             print("Error, número NO positivo.")
-        elif num in res:
+        elif estaEnLista(num, res):
             print("Error, número repetido.")
         else:
             res.append(num)
